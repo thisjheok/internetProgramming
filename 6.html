@@ -3,9 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>6.html</title>
+    <script>
+        function toggleVisibility(className, answer) {
+            let elements = document.getElementsByClassName(className);
+            for (let element of elements) {
+                if (element.innerHTML === "") {
+                    element.innerHTML = answer; // Set the answer if it is empty
+                } else {
+                    element.innerHTML = ""; // Clear the answer if it is already set
+                }
+            }
+        }
+    </script>
 </head>
 <body>
-    
+    <h2>정답의 동적 삽입</h2>
+    <hr>
+
+    <div>
+        <p>Q 거울아 거울아 세상에서 누가 제일 예쁘니?</p>
+        <button onclick="toggleVisibility('white', '백설공주')">답보기</button>
+        <p class="white"></p>
+    </div>
+    <div>
+        <p>Q 죽느냐 사느냐 어떤 것이 문제인가?</p>
+        <button onclick="toggleVisibility('die', '둘다')">답보기</button>
+        <p class="die"></p>
+    </div>
 </body>
 </html>
