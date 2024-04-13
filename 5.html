@@ -3,9 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>5.html</title>
+
+    <script>
+        function change(string){
+            this.innerHTML = eval(string);
+        }
+    </script>
 </head>
 <body>
-    
+    <h2>계산해봅시다</h2>
+    <hr>
+    <span>2 + 4 =</span>
+    <span onclick="change.call(this,'2 + 4')" class="num1">답</span>
+    <br>
+    <span>4 * 20 + 64 =</span>
+    <span onclick="change.call(this,'4 * 20 + 64')" class="num2">답</span>
+    <br>
+    <span>20/5-8*2 =</span>
+    <span onclick="change.call(this,'20/5-8*2')" class="num3">답</span>
 </body>
 </html>
