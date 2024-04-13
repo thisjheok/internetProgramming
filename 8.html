@@ -3,9 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>8.html</title>
+    <style>
+        img{
+            position: absolute;
+            margin-left: 10px;
+            margin-top: 20px;
+            width: 100px;
+            height: 140px;
+        }
+    </style>
+    <script>
+        function fun(element){
+            element.style.zIndex++;
+            if(element.style.zIndex>3){
+                element.style.zIndex =0;
+            }
+        }
+    </script>
 </head>
 <body>
-    
+    <h2>z-index 스타일 프로퍼티</h2>
+    <hr>
+    <img src="media/spade-2.png" onclick="fun(this)" style="z-index: 3">
+    <img src="media/spade-3.png" onclick="fun(this)" style="z-index: 2">
+    <img src="media/spade-7.png" onclick="fun(this)" style="z-index: 1">
+    <img src="media/spade-A.png" onclick="fun(this)" style="z-index: 0">
 </body>
 </html>
