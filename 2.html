@@ -3,9 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>2.html</title>
+    <script>
+        function result(){
+            let name = document.getElementById("name").value;
+            let major = document.getElementById("major").value;
+            let r = document.getElementById("btn");
+            r.innerHTML =  name + "의 소속학과는 <span id=redmajor>"+ major+"</span>"; 
+            document.getElementById("redmajor").style.color = "red";
+        }
+    </script>
 </head>
 <body>
-    
+    이름:<input type="text" id ="name">
+    <br>
+    학과:<input type="text" id ="major">
+    <hr>
+    <button onclick="result()">이름과 학과 확인</button>
+    <p id="btn"></p>
 </body>
 </html>
