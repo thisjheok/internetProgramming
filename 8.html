@@ -14,12 +14,20 @@
         }
     </style>
     <script>
-        function fun(element){
-            element.style.zIndex++;
-            if(element.style.zIndex>3){
-                element.style.zIndex =0;
-            }
+     let zIndexArray = [3, 2, 1, 0];  // 초기 z-index 배열
+
+    function fun(element) {
+        const images = document.querySelectorAll('img');
+
+        // 맨 처음 요소를 빼고 나머지를 한 칸씩 앞으로 당기기
+        let lastZIndex = zIndexArray.pop();
+        zIndexArray.unshift(lastZIndex);
+        
+        // 모든 이미지에 대해 새로 계산된 z-index 할당
+        for (let i = 0; i < images.length; i++) {
+            images[i].style.zIndex = zIndexArray[i];
         }
+    }
     </script>
 </head>
 <body>
